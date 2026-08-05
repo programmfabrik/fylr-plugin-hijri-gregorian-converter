@@ -1,0 +1,34 @@
+plugin:
+  name: fylr-plugin-hijri-gregorian-converter
+  version: "1.0.0"
+  url: https://github.com/programmfabrik/fylr-plugin-hijri-gregorian-converter
+  displayname:
+    de-DE: Hijri-Gregorianisch-Konverter
+    en-US: Hijri Gregorian Converter
+  info:
+    de-DE: |
+      Rechnet im Editor zwischen einem islamischen (Hijri) und einem gregorianischen Datum um. Gedacht für Datensätze, die beide Kalender führen — etwa historische Bestände, deren Quellen nach Hijri datiert sind, während die Recherche gregorianisch erfolgt.
+
+      - Ergänzt zwei Schaltflächen im Editor: "Hijri > Gregorianisch" und "Gregorianisch > Hijri"
+      - Wird als Custom Mask Splitter um genau zwei Datumsfelder gelegt (erst gregorianisch, dann Hijri)
+      - Unterstützt einzelne Datumsfelder ebenso wie Datumsbereiche, solange beide Felder vom selben Typ sind
+      - Rechnet im Browser; die Schaltflächen sind deaktiviert, solange das Ausgangsdatum leer oder ungültig ist
+
+      Die Umrechnung nutzt den arithmetischen Kalender und kann um einen Tag von einer Sichtungsangabe abweichen.
+    en-US: |
+      Converts between an Islamic (Hijri) and a Gregorian date inside the editor. Made for records that carry both calendars — historical holdings whose sources are dated in Hijri while research happens in Gregorian.
+
+      - Adds two buttons to the editor: "Hijri > Gregorian" and "Gregorian > Hijri"
+      - Placed as a custom mask splitter around exactly two date fields (Gregorian first, Hijri second)
+      - Works with single date fields and with date ranges, as long as both fields are of the same kind
+      - Converts in the browser; a button stays disabled while its source date is empty or invalid
+
+      Conversion uses the arithmetic calendar and may differ by a day from a sighting-based date.
+  server:
+    api-version:
+      require: 1
+  webfrontend:
+    url: hijri-gregorian-converter.js
+  l10n: l10n/hijri-gregorian-converter.csv
+
+base_url_prefix: webfrontend
