@@ -21,15 +21,7 @@ The plugin is a *custom mask splitter*. You wrap it around two date fields in
 the mask editor, and the editor then renders those two fields with a pair of
 conversion buttons between them:
 
-```
-┌─ Hijri Gregorian Converter ─────────────────────┐
-│  Datum (gregorianisch)   [ 1445-10-16      ]    │
-│                                                  │
-│        [ Hijri > Gregorianisch ]  [ Gregorianisch > Hijri ]
-│                                                  │
-│  Datum (Hijri)           [ 1867-02-14      ]    │
-└──────────────────────────────────────────────────┘
-```
+![The converter in the fylr editor: a Gregorian and a Hijri date field with the two conversion buttons between them](doc/editor.svg)
 
 Each button is disabled while its **source** field is empty or holds an
 invalid date, and both are disabled once a conversion has been applied, so it
