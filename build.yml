@@ -8,12 +8,13 @@ server:
     - l10n
 
 webfrontend:
-  # compiled + concatenated IN THIS ORDER into plugin.webfrontend.url
-  # (webfrontend/hijri-gregorian-converter.js). The converter defines the
-  # class the splitter uses, so it has to come first.
-  coffee1:
-    - webfrontend/HijriGregorianConverter.coffee
-    - webfrontend/HijriGregorianConverterMaskSplitter.coffee
+  # assembled into plugin.webfrontend.url, in this order:
+  # .coffee is compiled (CoffeeScript 1.x), .scss compiled,
+  # anything else taken verbatim
+  bundles:
+    - sources:
+        - webfrontend/HijriGregorianConverter.coffee
+        - webfrontend/HijriGregorianConverterMaskSplitter.coffee
 
 # The loca CSV is carried over from the easydb plugin as-is and has no Google
 # Sheets master yet, so there is no "loca" section: `make loca` would have
